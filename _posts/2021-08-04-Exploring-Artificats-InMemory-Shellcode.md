@@ -6,7 +6,7 @@ excerpt: "123"
 ---
 Introduction
 ---
-<img src="{{ site.url }}{{ site.baseurl }}/images/expezr.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/expezr.png" alt="">
 
 
 
