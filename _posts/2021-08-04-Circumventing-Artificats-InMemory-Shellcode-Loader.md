@@ -12,7 +12,7 @@ Introduction
 
 ---
 
-While doing research in windows primary memory shellcode injection by leveraging win32 APIs (CreateThread, VirtualAlloc), I was also interested in how the use of this technique can be identified from a blue-team prerspective. This led me down a rabbit hole of exploring various artifacts created when using the Add-Type keyword in powershell to compile C# code contating Win32 API declarations. From a blue team perspective, the creation of artifacts can be catched as an indicator of compromise or malicious behavior.
+While doing research in windows primary memory shellcode injection by leveraging win32 APIs (CreateThread, VirtualAlloc), I was also interested in how the use of this technique can be identified from a blue-team prerspective. This led me down a rabbit hole of exploring various artifacts created when using the Add-Type keyword in powershell to compile C# code contating Win32 API declarations. From a blue team perspective, the creation of artifacts can be flagged as an indicator of compromise or malicious behavior.
 
 In this blogpost, we will explore how to we can take this technique further by avoiding the creation of artifacts with the goal of evading anti-virus and EDR solutions. 
 
