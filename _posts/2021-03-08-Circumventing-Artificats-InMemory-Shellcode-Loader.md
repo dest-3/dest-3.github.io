@@ -1,6 +1,6 @@
 ---
 title: "Circumventing Artifacts: Windows In-memory Shellcode Loader Leveraging Native APIs"
-date: 2021-04-08
+date: 2021-03-08
 tags: [posts]
 excerpt: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
 ---
