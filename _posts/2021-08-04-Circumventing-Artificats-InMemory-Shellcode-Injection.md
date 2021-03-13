@@ -4,11 +4,13 @@ date: 2021-08-04
 tags: [posts]
 excerpt: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
 ---
+
 Introduction
 ---
-<img src="{{ site.url }}{{ site.baseurl }}/images/expezr.png" alt="">
----
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/expezr.png" alt="">
+
+---
 While doing research in windows primary memory shellcode injection by leveraging win32 APIs (CreateThread, VirtualAlloc), I was also interested in how the use of this technique can be identified from a blue-team prerspective. This led me down a rabbit hole of exploring various artifacts created when using the Add-Type keyword in powershell to compile C# code contating Win32 API declarations. From a blue team perspective, the creation of artifacts can be catched as an indicator of compromise or malicious behavior.
 
 In this blogpost, we will explore how to we can take this technique further by avoiding the creation of artifacts with the goal of evading anti-virus and EDR solutions. 
@@ -159,8 +161,9 @@ LPVOID VirtualAlloc(
 ```
 
 ---
-Modified POC:
+Modified POC
 ---
+
 ```
 [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer((LookupFunc kernel32.dll VirtualAlloc), 
 (getDelegateType @([IntPtr], [UInt32], [UInt32], [UInt32]) ([IntPtr]))).Invoke([IntPtr]::Zero, 0x1000, 0x3000, 0x40)
@@ -187,7 +190,7 @@ DWORD WaitForSingleObject(
 ---
 Room for Improvement
 ---
-* system proxy awareness - To ensure the client can route outwards
+* system proxy awareness - To ensure the client can route outwards if a system proxy is present
 * encrypted shellcode support - Another layer of evasion
 
 
