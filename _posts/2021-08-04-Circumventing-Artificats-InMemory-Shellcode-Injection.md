@@ -58,7 +58,7 @@ Add-Type $User32 #add-type compilation of c# code
 
 Before executing the powershell script, fire up Process Monitor and set a filter for powershell.exe. We can clear old events using Ctrl+X. Upon execution of the script, hit control Ctrl+F and search for ".cs". CreateFile, WriteFile, and CloseFile operations can be observed involving a .cs file containing our C# code and its resulting .dll. This suggests that the in-memory 'MessageBox' Runner has not operated completely in memory and has indeed written files to disk. This happens since the Add-Type keyword calls the csc compiler which in-turn creates the C# code file and then compiles it into a dynamicly linked library. This dll is then loaded into memory and both files are removed from disk. Note that the filenames are randomly generated during runtime. 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/procmon.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/post_img/procmon.png" alt="">
 
 By using the Get-Assemblies method on the CurrentDomain Object, we can also view all loaded assemblies; confirming that our .dll file has indeed been loaded into memory.
 
