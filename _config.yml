@@ -108,7 +108,6 @@ author:
   avatar           : "/images/ME.jpg"
   bio              : "OSCP | Red Teamer | Student"
   location         : "United States"
-  email            :
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
