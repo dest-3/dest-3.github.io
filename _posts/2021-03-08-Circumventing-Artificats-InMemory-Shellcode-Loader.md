@@ -195,7 +195,7 @@ Room for Improvement
 ---
 * system proxy awareness - To ensure the client can route outwards if a system proxy is present
 * encrypted shellcode support - Another layer of evasion
-* Injecting shellcode in other processes
+* process injection and migration
 
 Additional Sources
 ---
