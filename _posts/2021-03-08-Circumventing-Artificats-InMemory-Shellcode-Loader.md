@@ -91,8 +91,9 @@ As indicated in the screenshots above my target assembly is System.dll. After ob
 ```
 function LookupFunc {	Param ($moduleName, $functionName) 
 	
-	$assem = ([AppDomain]::CurrentDomain.GetAssemblies() |	Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1]. 
-		Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods') #get only unsafe	$tmp=@()	$assem.GetMethods() | ForEach-Object {If($_.Name -eq "GetProcAddress") {$tmp+=$_}} 
+	$assem = ([AppDomain]::CurrentDomain.GetAssemblies() |	Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods') #get only unsafe	
+        $tmp=@()	
+        $assem.GetMethods() | ForEach-Object {If($_.Name -eq "GetProcAddress") {$tmp+=$_}} 
 	return $tmp[0].Invoke($null, @(($assem.GetMethod('GetModuleHandle')).Invoke($null, 
 	@($moduleName)), $functionName)) } #get the address of the target method via a handle to the user supplied dll
 ```
