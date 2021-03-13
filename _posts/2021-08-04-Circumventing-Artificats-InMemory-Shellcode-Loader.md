@@ -89,10 +89,10 @@ In order to be able to dynamically look up win32 API function addresses we first
 As indicated in the screenshots above my target assembly is System.dll. After obtaining a handle to System.dll, the GetModuleHandle and GetProcAddress APIs can be invoked to obtain the memory address of MessageBox in user32.dll. To make this easier, the function presented below receives the target dll (user32.dll) and target function (MessageBox) and returns its memory address. 
 
 ```
-function LookupFunc { 	Param ($moduleName, $functionName) 
+function LookupFunc {	Param ($moduleName, $functionName) 
 	
-	$assem = ([AppDomain]::CurrentDomain.GetAssemblies() | 	Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1]. 
-		Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods') #get only unsafe 	$tmp=@() 	$assem.GetMethods() | ForEach-Object {If($_.Name -eq "GetProcAddress") {$tmp+=$_}} 
+	$assem = ([AppDomain]::CurrentDomain.GetAssemblies() |	Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1]. 
+		Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods') #get only unsafe	$tmp=@()	$assem.GetMethods() | ForEach-Object {If($_.Name -eq "GetProcAddress") {$tmp+=$_}} 
 	return $tmp[0].Invoke($null, @(($assem.GetMethod('GetModuleHandle')).Invoke($null, 
 	@($moduleName)), $functionName)) } #get the address of the target method via a handle to the user supplied dll
 ```
@@ -110,7 +110,7 @@ A delegate is normally created when an assembly is compiled (eg. using Add-Type 
 
 ```
 function getDelegateType { 
-	Param ( 		[Parameter(Position = 0, Mandatory = $True)] [Type[]] $func, 
+	Param (		[Parameter(Position = 0, Mandatory = $True)] [Type[]] $func, 
 		[Parameter(Position = 1)] [Type] $delType = [Void] 
 	) 
 
