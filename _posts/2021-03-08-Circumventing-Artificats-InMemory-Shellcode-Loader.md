@@ -22,7 +22,9 @@ We will be using powershell to compile C# allowing us to reference the MessageBo
 
 Lets jump right in!
 
-In the following code, user32.dll is imported and the function declaration of MessageBox is created. The Add-Type powershell keyword is then leveraged to compile the C# code containing the declaration. Finally, the MessageBox function will be called with the appropriate arguments.
+In the following code, user32.dll is imported and the function declaration of MessageBox is created. 
+Note that the **extern** modifier is used to indicate that the MessageBox method is implemented externally. This is standard procedure when wanting to utilize the DLLImport attribute to call unmanaged code. 
+The **Add-Type** powershell keyword is then leveraged to compile the C# code containing the declaration. Finally, the MessageBox function is called with the appropriate arguments.
 
 Note that we are importing the P/Invoke APIs (using System; Using System.Runtime.InteropServices) in order to translate our C# data types to C. This satisfies the syntax requirements of the MessageBox function shown below. 
 
@@ -194,12 +196,15 @@ DWORD WaitForSingleObject(
 
 Room for Improvement
 ---
-* system proxy awareness - To ensure the client can route outwards if a system proxy is present
-* encrypted shellcode support - Another layer of evasion
-* process injection and migration
+* system proxy awareness - ensuring the client can route outwards if a system proxy is present
+* encrypted shellcode support
+* process injection and migration - running our shell within the address space of an existing process. we could also jump around. 
 
 Additional Sources
 ---
+The following sources provide insight to the various ideas discussed in this post.
+
+* https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern
 * https://www.powershellgallery.com/packages/HackSql/1.0.2/Content/Get-DelegateType.ps1
 * https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject
 * https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc
