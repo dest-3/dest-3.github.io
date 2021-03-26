@@ -23,8 +23,7 @@ We will be using powershell to compile C# allowing us to reference the MessageBo
 Lets jump right in!
 
 In the following code, user32.dll is imported and the function declaration of MessageBox is created. 
-Note that the **extern** modifier is used to indicate that the MessageBox method is implemented externally. This is standard procedure when wanting to utilize the DLLImport attribute to call unmanaged code. 
-The **Add-Type** powershell keyword is then leveraged to compile the C# code containing the declaration. Finally, the MessageBox function is called with the appropriate arguments.
+Note that the **extern** modifier is used to indicate that the MessageBox method is implemented externally. This is standard procedure when wanting to utilize the DLLImport attribute to call unmanaged code. The **Add-Type** powershell keyword is then leveraged to compile the C# code containing the declaration. Finally, the MessageBox function is called with the appropriate arguments.
 
 Note that we are importing the P/Invoke APIs (using System; Using System.Runtime.InteropServices) in order to translate our C# data types to C. This satisfies the syntax requirements of the MessageBox function shown below. 
 
