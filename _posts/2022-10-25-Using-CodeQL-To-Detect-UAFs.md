@@ -1,6 +1,6 @@
 ---
 title: "Using CodeQL to detect Use After Free (UAFs)"
-date: 2022-10-25
+date: 2022-10-21
 tags: [posts]
 excerpt: "A codeql query to detect Use After Free (UAF)"
 ---
