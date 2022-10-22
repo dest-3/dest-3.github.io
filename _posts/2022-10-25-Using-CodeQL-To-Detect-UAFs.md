@@ -14,7 +14,7 @@ My approach to detecting UAFs was the following:
 1. Identifying calls to the free function and the object freed. (source) 
 2. Identifying dereferences of the specific object after it was freed. (sink)
 
-Using CodeQL's data flow path graph configuration I was able to construct a query by digging through online sources that identifies code paths from the source to the sink indicated above. More information in how these queries work can be found here. The single piece that I was initially missing is finding dereferences after an initial call to free. 
+Using CodeQL's data flow path graph configuration I was able to construct a query for this purpose by digging through online sources. This query identifies code paths from the source to the sink indicated above. More information in how these queries work can be found here. The single piece that I was initially missing is finding dereferences after an initial call to free. 
 
 Query
 ---
