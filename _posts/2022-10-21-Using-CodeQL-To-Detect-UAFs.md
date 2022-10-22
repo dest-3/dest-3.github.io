@@ -8,7 +8,7 @@ excerpt: "A codeql query to detect Use After Free (UAF) for C and C++ codebases"
 Introduction
 ---
 
-As part of a research project in the cybersecurity of small satellites (cubesats / nanosats), I was in search of way to hunt for memory corruption vulnerabilities in libraries used by these devices using a semantic code analysis engine; CodeQL. The specific library I was targetting had several buffer overflow vulnerabilities previously disclosed, thus I decided to search for potential Use after Frees (UAFs). 
+As part of a research project in the cybersecurity of small satellites (cubesats / nanosats), I was in search of an automated way to hunt for memory corruption vulnerabilities in large codebases used by these devices. Since these codebases were open source, I chose the semantic code analysis engine CodeQL. The specific library I was targetting had several buffer overflow vulnerabilities previously disclosed, thus I decided to search for potential Use after Frees (UAFs). 
 
 My approach to detecting UAFs was the following: 
 1. Identifying calls to the free function and the object freed. (source) 
