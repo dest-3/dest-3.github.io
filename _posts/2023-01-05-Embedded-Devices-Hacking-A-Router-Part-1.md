@@ -2,7 +2,7 @@
 title: "Embedded Devices: Hacking a Router Part 1"
 date: 2023-01-05
 tags: [posts]
-excerpt: "Getting a root shell on a router via hardware debug ports and exploring exposed services"
+excerpt: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
 ---
 
 Introduction
