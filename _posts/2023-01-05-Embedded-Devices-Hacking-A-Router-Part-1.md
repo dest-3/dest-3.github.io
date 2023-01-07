@@ -33,7 +33,7 @@ After identifying all the chips and their respective model numbers, we can searc
 
 Adding labels to the internal photo picture from the fcc website - we know the following: 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/ig-hardware.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/ig-hardware.png" alt="">
 
 Hunting for Debug Ports
 ---
@@ -102,7 +102,7 @@ Welcome to
 
 Looking closely at the process list, it is evident that the router is running a telnet daemon. This is looks like the avenue to our shell. Note that the initial Nmap scan did not detect the telnet service. Quick googling around and I stumbled on this [source](https://openwrt.org/toh/netgear/telnet.console). It seems that Netgear routers have a built-in administrative telnet backdoor that can be enabled using the router's web interface. I enabled the telnet service using the following URL: ``http://192.168.1.1/setup.cgi?todo=debug``. To log in, I used the credentials of the admin user of the router's web interface. 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/badge-setup.jpeg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/telnet.png" alt="">
 
 What now?
 ---
