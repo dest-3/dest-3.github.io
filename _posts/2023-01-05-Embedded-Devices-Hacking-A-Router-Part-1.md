@@ -1,5 +1,5 @@
 ---
-title: "Embedded Devices: Hacking a Router Part 1"
+title: "Embedded Devices: Pwning a Router Part 1 - Attaching to UART"
 date: 2023-01-05
 tags: [posts]
 excerpt: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
@@ -12,7 +12,7 @@ Introduction
 
 ---
 
-Embedded device security research is an adventure like no other. In this multipart blog series, I embark on a journey towards pwning a NETGEAR router. For part 1, I will document my efforts in conducting initial reconnaisance and obtaining a root shell via the hardware debug interface.
+Embedded device security research is an adventure like no other. In this multipart blog series, I embark on a journey towards pwning a NETGEAR router. For part 1, I will document my efforts in conducting initial hardware reconnaisance and obtaining a root shell via the debug interface. In later parts, I will focus on reversing and exploiting service binaries. 
 
 **Target device: AC1200 Nigthawk Smart Wifi Router (R6220)**
 
