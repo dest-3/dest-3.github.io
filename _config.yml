@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Michalis Antoniades"
   avatar           : "/images/ME.jpg"
-  bio              : "OSCP | Red Teamer | Student"
+  bio              : "Security Research Blog"
   location         : "United States"
   links:
     - label: "GitHub"
