@@ -14,7 +14,7 @@
     {% include head/custom.html %}
     {% include head/custom-head.html %}
     {% include analytics.html %}
-    {% include general/og.html %}
+    {% include og.html %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
