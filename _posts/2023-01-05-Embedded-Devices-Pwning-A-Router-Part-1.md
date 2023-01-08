@@ -4,7 +4,7 @@ date: 2023-01-05
 tags: [posts]
 excerpt: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
 description: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
-permalink: https://dest-3.github.io/Embedded-Devices-Pwning-A-Router-Part-1/
+permalink: Embedded-Devices-Pwning-A-Router-Part-1/
 ---
 
 Introduction

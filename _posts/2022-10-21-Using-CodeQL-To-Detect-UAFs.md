@@ -4,7 +4,7 @@ date: 2022-10-21
 tags: [posts]
 excerpt: "A codeql query to detect Use After Free (UAF) for C and C++ codebases"
 description: "A codeql query to detect Use After Free (UAF) for C and C++ codebases"
-permalink: https://dest-3.github.io/Using-CodeQL-To-Detect-UAFs/
+permalink: Using-CodeQL-To-Detect-UAFs/
 ---
 
 Introduction
