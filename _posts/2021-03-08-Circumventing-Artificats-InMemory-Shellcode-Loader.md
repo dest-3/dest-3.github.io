@@ -3,6 +3,8 @@ title: "Circumventing Artifacts: Windows In-memory Shellcode Loader Leveraging N
 date: 2021-03-08
 tags: [posts]
 excerpt: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
+description: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
+permalink: https://dest-3.github.io/Circumventing-Artificats-InMemory-Shellcode-Loader/
 ---
 
 Introduction
