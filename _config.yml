@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Michalis Antoniades"
   avatar           : "/images/ME.jpg"
-  bio              : "Security Research Blog"
+  bio              : "Security Researcher"
   location         : "United States"
   links:
     - label: "GitHub"
