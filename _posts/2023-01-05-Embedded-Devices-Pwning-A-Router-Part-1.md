@@ -1,7 +1,7 @@
 ---
 title: "Embedded Devices: Pwning a Router Part 1 - Attaching to UART"
 date: 2023-01-05
-tags: [posts]
+tags: [posts, test]
 excerpt: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
 description: "Exploring the hardware of an embedded device, connecting to the debug interface, obtaining a shell"
 permalink: Embedded-Devices-Pwning-A-Router-Part-1/
