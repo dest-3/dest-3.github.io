@@ -1,7 +1,7 @@
 ---
 title: "Circumventing Artifacts: Windows In-memory Shellcode Loader Leveraging Native APIs"
 date: 2021-03-08
-tags: [posts]
+tags: [posts, windows native API, artifacts, red-teaming, shellcode]
 excerpt: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
 description: "A dive in leveraging windows native APIs to run shellcode while circumventing the generation of artifacts."
 permalink: Circumventing-Artificats-InMemory-Shellcode-Loader/

@@ -1,7 +1,7 @@
 ---
 title: "Using CodeQL to detect Use After Free (UAFs)"
 date: 2022-10-21
-tags: [posts]
+tags: [posts, codeql, use-after-free, exploit development, codeql query, uaf]
 excerpt: "A codeql query to detect Use After Free (UAF) for C and C++ codebases"
 description: "A codeql query to detect Use After Free (UAF) for C and C++ codebases"
 permalink: Using-CodeQL-To-Detect-UAFs/
